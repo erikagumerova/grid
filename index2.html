@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+.container {
+    display: grid;
+    margin-top: 30px;
+    max-width: 940px;
+    margin: 30px auto;
+    grid-auto-rows: 80px;
+   grid-auto-columns: 300px;
+    grid-template-areas:
+"a b c"
+"a b c"
+"a b d"
+"a b d"
+"a b f"
+"a e f"
+"a e f"
+}
+
+.container > div {
+    border: 1px solid white;
+    padding: 15px;
+}
+
+.container div:nth-child(1) { grid-area: a; }
+.container div:nth-child(2) { grid-area: b; }
+.container div:nth-child(3) { grid-area: c; }
+.container div:nth-child(4) { grid-area: d; }
+.container div:nth-child(5) { grid-area: e; }
+.container div:nth-child(6) { grid-area: f; }
+
+
+.container div:nth-child(1) {
+    background-image: url(images/hero-demo1.jpg);
+    background-size: cover;
+} 
+
+.container div:nth-child(2) {
+    background-image: url(images/hero-demo5.jpg);
+    background-size: cover;
+    /* display: grid; */
+   display: flex;
+   flex-direction: column;
+   justify-content: end;
+
+} 
+
+.container div:nth-child(3) {
+    background-image: url(images/hero-demo3.jpg);
+    background-size: cover;
+
+} 
+
+
+.container div:nth-child(4) {
+    background-image: url(images/hero-demo2.jpg);
+    background-size: cover;
+
+} 
+
+.container div:nth-child(5) {
+    background-image: url(images/hero-demo4.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+   justify-content: end;
+
+} 
+
+.container div:nth-child(6) {
+    background-color: rgb(163, 15, 39);
+    display: grid;
+    padding-bottom: 25px;
+} 
+
+h2 {
+    font-size: 20px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+p {
+    font-size: 16px;
+    color: white;
+}
+
+h3, a {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+button {
+    align-self: flex-end;
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 18px;
+    padding: 5px 40px;
+}
+
+
+
+@media (max-width: 800px) {
+    .container {
+    grid-auto-rows: 1fr;
+   grid-auto-columns: 1fr;
+    grid-template-areas:
+"a a"
+"a a"
+"b c"
+"b d"
+"b f"
+"e f"
+} 
+
+}
+
+@media (max-width: 600px) {
+    .container {
+    grid-template-areas:
+"a"
+"b"
+"c"
+"d"
+"e"
+"f"
+} 
+}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+<div>
+<h2>Нам нравятся воздушные шары</h2>
+<p>Здесь Вы можете найти много интересного, связанного с воздушными шарами.</p></div>
+<div>
+<h2 style="margin-bottom: 25px">Необычные формы</h2>
+<p>Почему некоторые из них так
+    необычно выглядят?</p></div>
+<div>
+<h2>Как воздушные шары зависят от погоды</h2>
+<p>Нагретые воздушные шары.</p>
+</div>
+<div>
+<h2>Фото воздушных шаров</h2>
+<p>Праздник форм и размеров</p>
+</div>
+<div>
+<h2>10 вещей, которые вы обнаружите, когда летите на воздушном шаре</h2>
+</div>
+<div>
+<p style="align-self: flex-start">Зарегистрируйтесь не откладывая.</p>
+<button>Зарегистрироваться</button>
+
+</div>
+    </div>
+</body>
+</html>
